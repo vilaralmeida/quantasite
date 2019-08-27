@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Quanta Analytics</title>
-    <link>/</link>
-      <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <description>Quanta Analytics</description>
+    <title>risco | Quanta Analytics</title>
+    <link>/categories/risco/</link>
+      <atom:link href="/categories/risco/index.xml" rel="self" type="application/rss+xml" />
+    <description>risco</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
-      <title>Quanta Analytics</title>
-      <link>/</link>
+      <title>risco</title>
+      <link>/categories/risco/</link>
     </image>
     
     <item>

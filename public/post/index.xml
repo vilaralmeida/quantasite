@@ -5,12 +5,68 @@
     <link>/post/</link>
       <atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 26 Aug 2019 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/img/icon-192.png</url>
       <title>Posts</title>
       <link>/post/</link>
     </image>
+    
+    <item>
+      <title>Risco em Investimentos: Uma breve introdução à Volatilidade</title>
+      <link>/post/risco-em-investimentos-uma-breve-introducao/</link>
+      <pubDate>Mon, 26 Aug 2019 00:00:00 +0000</pubDate>
+      <guid>/post/risco-em-investimentos-uma-breve-introducao/</guid>
+      <description>
+
+
+&lt;div id=&#34;introducao&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introdução&lt;/h1&gt;
+&lt;p&gt;Vamos falar de um tema bem polêmico e que tem aparecido constantemente nas discussões sobre investimentos nas redes sociais. Vamos falar sobre &lt;em&gt;Risco&lt;/em&gt; em Investimentos.&lt;/p&gt;
+&lt;p&gt;Para começar, precisamos conceituar o que é risco. Segundo a &lt;a href=&#34;https://www.investopedia.com/terms/f/financialrisk.asp#axzz1b9QLCKIO&#34;&gt;Investopedia&lt;/a&gt; Risco Financeiro é um termo que pode se aplicar a negócios, entes governamentais, ao mercado financeiro como um todo ou a indivíduos. Nesse contexto, o Risco é definido como a possibilidade de perda financeira.&lt;/p&gt;
+&lt;p&gt;A conotação negativa dada ao risco se refere à ameaça representada pela perda de patrimônio. De fato, essa interpretação é bastante comum, onde muitos associam o risco a eventos negativos, o que acaba afastando o indivíduo de aplicações financeiras do tipo &lt;em&gt;renda variável&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Mas o risco é muito mais do que isso. Trata-se de uma medida que envolve vários fatores. Não há uma única métrica capaz de unicamente representar o risco. Analisar o risco requer a análise de vários fatores. Vamos falar de um desses fatores nesse post.&lt;/p&gt;
+&lt;div id=&#34;a-volatilidade&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;A Volatilidade&lt;/h2&gt;
+&lt;p&gt;“Vol é vida”! Você já ouviu essa frase? Para alguns analistas do mercado financeiro a volatilidade representa o que de melhor pode ocorrer: Oportunidades se abrem e se fecham nos movimentos de alta e baixa da bolsa de valores. Mas nem todos enxergam dessa forma: Observar a perda de capital em um momento de decorrada é suficiente para pular fora do investimento e realizar o prejuízo.&lt;/p&gt;
+&lt;div id=&#34;vamos-ao-exemplo.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Vamos ao Exemplo.&lt;/h3&gt;
+&lt;p&gt;Supondo a existência da empresa “Quanta Capital”, que opera na bolsa com a ação QUANT3, que apresentou os seguintes retornos nos últimos 15 pregões:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;## Incluindo retorno diario de 15 pregões para a acao QUANT3
+retorno_diario &amp;lt;- c(0.2, -0.3, 0.11, 0.17, -0.6, 0.4, 0.3, 0.3, -0.2, 1.3, 1.2, -2.1, 0.1, 0.1, 1.4)
+
+# Calculando o Retorno Medio
+(retorno_medio &amp;lt;- mean(retorno_diario))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.1586667&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Nesse cenário, observamos que o retorno médio da ação é de aprox. 0.15 i.e., em média a ação QUANT3 retornou no período observado um lucro (ver média positiva) de 0.15.&lt;/p&gt;
+&lt;p&gt;Mas a média dos retornos ainda não diz muito sobre a aplicação. É necessário compreender como essa média se comporta. 0.15 é um valor que ocorre com frequência? Vamos observar no exemplo a seguir:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Calculando o Desvio Padrão
+(desvio_padrao &amp;lt;- sd(retorno_diario))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 0.8474067&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;O desvio padrão é de aprox. 0.85! Ou seja, o valor médio não é tão comum e podemos esperar uma dispersão considerável dos resultados dos pregões da ação QUANT3.&lt;/p&gt;
+&lt;p&gt;Nesse momento, considerando o retorno médio de 0.15 e desvio padrão de 0.85, podemos afirmar que (considerando uma &lt;a href=&#34;https://pt.wikipedia.org/wiki/Distribui%C3%A7%C3%A3o_normal&#34;&gt;distribuição normal&lt;/a&gt;) que em aproximadamente 68% das vezes o retorno diário do pragão estará na seguinte faixa de valores:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Limite Superior 
+(retorno_medio + desvio_padrao)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 1.006073&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Limite Inferior
+(retorno_medio - desvio_padrao)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -0.68874&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Se considerarmos 95% dos pregões, podemos esperar que os valores de retorno estejam na seguinte faixa:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Limite Superior 
+(retorno_medio + 3*desvio_padrao)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] 2.700887&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Limite Inferior
+(retorno_medio - 3*desvio_padrao)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] -2.383553&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;conclusao&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Conclusão&lt;/h1&gt;
+&lt;p&gt;Esse exemplo é bastante simples e restrito, mas dá uma noção básica da variância de resultados de uma ação. No cenário hipotético, avaliamos os retornos diários esperados da ação QUANT3 com base em duas medidas simples: Média e Desvio Padrão. O Mundo real é mais complexo, e vamos avaliar nos próximos posts como essa dinâmica evolui para um cenário real de análise de ativos no contexto da bolsa de valores.&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

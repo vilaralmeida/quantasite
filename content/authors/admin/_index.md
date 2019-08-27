@@ -72,4 +72,4 @@ user_groups:
 - Visitors
 ---
 
-Quanta é a iniciativa de um grupo de Cientistas e Engenheiros de Dados com interesse em entregar __insights__, visualização de dados, automação e inteligência para o Mercado Financeiro. Temos como principal expertise o desenvolvimento de Soluções em R ou Python, dashboards analíticos, análise de séries temporais e provisionamento do __pipeline__ de dados financeiros em nuvem: Estruturamos os insumos tecnológicos necessários para a operacionalização de um moderno escritório de investimentos.   
+Quanta é a iniciativa de um grupo de Engenheiros de Dados com interesse em entregar tecnologia para o Mercado Financeiro. Temos como principal expertise o desenvolvimento de Soluções de Software e toda tecnologia necessária para o consumo e apresentação de dados financeiros em nuvem. Nossa missão é estruturar os insumos tecnológicos necessários para a transformação digital do moderno assessor de investimentos.   
